@@ -1,0 +1,14 @@
+---
+import Social from './Social.astro';
+import linktree from './linktree.svg';
+import linkedin from './linkedin.svg';
+import github from './github.svg';
+import mastodon from './mastodon.svg';
+---
+
+<footer class='mx-auto flex flex-row gap-4'>
+  <Social platform='github.com' icon={github} username='tdehart' />
+  <Social platform='linktr.ee' icon={linktree} username='tdehart' />
+  <Social platform='hachyderm.io' icon={mastodon} username='@tdehart' />
+  <Social platform='linkedin.com/in' icon={linkedin} username='thomas-dehart' />
+</footer>

@@ -1,0 +1,20 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import fallbackIcon from './linktree.svg';
+
+interface Props {
+  platform: string;
+  username: string;
+  icon?: ImageMetadata;
+}
+const { platform, username, icon = fallbackIcon } = Astro.props;
+---
+
+<a
+  rel='noopener noreferrer me'
+  target='_blank'
+  href={`https://${platform}/${username}`}
+>
+  {icon ? <Image src={icon} width='32' alt={platform} /> : platform}
+</a>

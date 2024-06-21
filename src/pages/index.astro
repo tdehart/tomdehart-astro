@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const allPosts = await Astro.glob('../pages/projects/*.md');
 ---
 
 <Layout title='tomdeh.art'>
-  <main>
-    <h1>Welcome to <span class='text-gradient'>tomdeh.art</span></h1>
-  </main>
+  <!-- <h1 class='prose'>Welcome to tomdeh.art</h1> -->
 </Layout>
