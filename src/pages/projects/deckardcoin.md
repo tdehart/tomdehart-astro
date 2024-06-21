@@ -7,26 +7,22 @@ author: 'Tom DeHart'
 image:
   url: 'https://docs.astro.build/assets/full-logo-light.png'
   alt: 'The full Astro logo.'
-tags: ['astro', 'blogging', 'learning in public']
 ---
 
 I've held off writing this for 2 years because exploiting online video games is a touchy subject and most gamers have a (justified) hatred towards those who do it. Also it didn't help that the VP of Legal Affairs at Blizzard Entertainment threatened me with a lawsuit if I didn't stop what I was doing. I've always wanted to write about it because I think it's an interesting story and reading [this blog post](http://diablo3story.blogspot.com/2014/07/a-diablo-3-story.html) has finally convinced me to get it out there. So this is a story of making thousands of dollars playing the video game Diablo 3, creating and selling a bot that helped destroy the game's economy, nearly getting into legal trouble, then getting permanently banned from PayPal. This all happened in the span of two months.
 
 First a bit of context: [Diablo](http://bit.ly/1pSLIOm) is an action RPG with a heavy emphasis on player-found items. Items are obtained quite simply by killing computer-generated monsters, and your character's ability to kill harder monsters (which drop better stuff) is almost entirely dependent upon the quality of your gear. The ultimate goal of any Diablo game is to get cool loot and kill harder monsters, then get cooler loot and kill even harder monsters, and so on until you quit. It seems like a fruitless pursuit but the franchise is wildly popular with Diablo 3 having sold more [15 million copies](http://www.ign.com/articles/2014/02/07/diablo-3-surpasses-15-million-sales) since its release.
 
-<p align="center">
-  <img src="/images/loot.jpg" class="blog-img"/>
-  <span class="caption">Loot drops can trigger a <a href="http://www.psychologyofgames.com/2012/06/the-psychology-of-diablo-iii-loot-part-3-dopamine-binds-on-pickup/">dopamine release</a></span>
-</p>
+![loot](images/loot.jpg)
+
+  <!-- <span class="caption">Loot drops can trigger a <a href="http://www.psychologyofgames.com/2012/06/the-psychology-of-diablo-iii-loot-part-3-dopamine-binds-on-pickup/">dopamine release</a></span> -->
 
 Item-centric games like Diablo almost always have popular virtual economies where saavy players (with a lot of time on their hands) are able to make a quick buck pawning their goods to casual players with disposable income. Everyone wants to have a powerful character and, when items determine the bulk of your strength, the only way to get them is to either spend a lot of time playing, or spend a lot of money. Where there is money to be made you will eventually find entrepeneurs moving in to optimize the delivery of goods to the buyers. As such, virtual currency farming, or [gold farming](http://en.wikipedia.org/wiki/Gold_farming), is estimated to be a [multi-billion dollar](http://www.theguardian.com/world/2011/may/25/china-prisoners-internet-gaming-scam) industry.
 
 Gold farmers ruin the gaming experience in a number of ways and are infamous for spamming chat channels and using in-game messaging systems to mass advertise their services. Even worse, people employed by gold farming companies are [being exploited](http://massively.joystiq.com/2008/10/25/gold-farmers-connected-with-$-38-million-money-laundering-bust/) for cheap labor in order to meet buyer demand of in-game goods. On top of this, these shady companies use social engineering and brute force attacks to hack player accounts. World of Warcraft characters, for example, are commonly worth [hundreds or thousands of dollars](http://www.playerauctions.com/wow-account/) which is [fueling](http://news.cnet.com/No-end-in-sight-to-hacking-of-WoW-accounts/2100-1043_3-6174704.html) the practice of hacking accounts.
 
-<p align="center">
-  <img src="/images/spam.png" class="blog-img"/>
-  <span class="caption">Every MMO player is familiar with this</span>
-</p>
+![spam](images/spam.png)
+<span class="caption">Every MMO player is familiar with this</span>
 
 In an effort to stop the arms race against gold farmers and alike, Blizzard decided to legitimize the trade of virtual goods by introducing a [real money auction house](http://us.battle.net/d3/en/blog/6360586/real-money-auction-house-now-available-in-the-americas-6-12-2012) (RMAH) in Diablo 3. Instead of dealing with shady businesses in order to buy in-game currencies, players could now buy directly from others and it was all facilitated by Blizzard. Their intentions were pure but Blizzard later found that the RMAH [undermined Diablo's core gameplay](http://us.battle.net/d3/en/blog/13354139/diablo-iii-auction-house-comes-to-a-close-3-18-2014) which resulted in them shutting it down 2 years later. But not before [people like me](http://venturebeat.com/2014/03/19/meet-the-gamers-who-earned-big-in-the-now-closed-diablo-iii-real-money-auction-house/view-all/) made tens of thousand of dollars in just a couple months.
 
@@ -36,10 +32,9 @@ When Diablo 3 finally came out we hit the ground running. We started the moment 
 
 In a Diablo 3 IRC channel that I hung out in someone posted a screenshot of a weeks worth of their auction house transactions. He bought and sold over a hundred items, many netting him tens of millions of gold each. Even with 5 people running our resplendent chest scheme we weren't coming anywhere close to this single person's income. It wasn't hard to figure out from the screenshot that he was simply buying low and selling high – it turned out that the average person was vastly underpricing their items. Once discovering this we pretty much stopped playing the game itself: the new game was the auction house.
 
-<p align="center">
-  <img src="/images/deckard-coin-01.png" class="blog-img"/>
-  <span class="caption">Simple: buy low, sell high</span>
-</p>
+![spam](images/deckard-coin-01.png)
+
+<!-- <span class="caption">Simple: buy low, sell high</span> -->
 
 We spent hours tweaking our search criteria and discovering all of the obscure items that people wanted. It wasn't enough to pursue commonly sought after gear like [Blackthorn's Surcoat](http://us.battle.net/d3/en/item/blackthornes-surcoat) or [Andariel's Visage](http://us.battle.net/d3/en/item/andariels-visage). Instead we would look for stuff like underpriced rare rings and amulets that most players didn't even realize yet were highly valuable. We managed huge spreadsheets to track the buy and sell prices of every item that passed through our inventories. Instead of working together as a group like we did before, we kept our search lists and spreadsheets closely guarded. It was mostly so that we didn't tread on each other's markets, but it was also a vicious competition where we bragged about our profits each day.
 
@@ -51,8 +46,8 @@ After spending that day learning how the bot worked I became motivated to make s
 
 Building the bot was a lot of fun even though [my code](https://github.com/tdehart/DeckardCoin) was probably crap. In an effort to beat everyone else to the punch, I worked 16 hour days until it was done. Our failed virtual economy blog didn't need it anymore so I took the name _Deckard Coin_, a play on words of an iconic character in the series named [Deckard Cain](http://diablo.wikia.com/wiki/Deckard_Cain) who was known for his vast knowledge. The [resulting product](https://www.youtube.com/watch?v=H-ZRnsiEpu8) was actually better than I expected. It was lightning fast for something that didn't inject into memory and could hook into any number of clients which was completely unique at the time.
 
-<div class="center-block">
-  <iframe class="youtube-vid" src="//www.youtube.com/embed/H-ZRnsiEpu8" frameborder="0" allowfullscreen></iframe>
+<div>
+  <iframe src="//www.youtube.com/embed/H-ZRnsiEpu8" frameborder="0" allowfullscreen></iframe>
   <span class="caption">Deckard Coin in action</span>  
 </div>
 
@@ -70,9 +65,8 @@ There's a lot of mistrust in the hacking and botting communities since viruses a
 
 After my demise newer and better bots sprung up, and the competition was fierce. As gold farmers improved their methods inflation became more of a problem. Legit players simply could not compete and, those that didn't spend real money to buy gold, were muscled out of the economy as botters relisted everything at exorbitant prices. Posts [like these](http://www.reddit.com/r/gaming/comments/vmgg5/diablo_3_is_plummeting_an_active_public_online/c55s06n) epitomized public opinion at the time. Diablo 3 was in shambles and remained that way until the auction house was eventually [shut down](http://us.battle.net/d3/en/blog/10974978/diablo%C2%AE-iii-auction-house-update-9-17-2013) and [trading was disabled](http://imaginarymarkets.com/patch-2-0-1-live-on-diablo-3-gold-no-longer-tradeable-legendaries-and-set-bind-on-accoun).
 
-<p align="center">
-  <img src="/images/rmah.jpg" class="blog-img"/>
-  <span class="caption">Screenshots like these were commonly passed around in an effort to brag. <a href="http://www.reddit.com/r/Diablo/comments/xqv2r/ive_made_10000_legitimately_from_the_d3_market/">(Source)</a></span>
-</p>
+![real money auction house](images/rmah.jpg)
+
+<!-- <span class="caption">Screenshots like these were commonly passed around in an effort to brag. <a href="http://www.reddit.com/r/Diablo/comments/xqv2r/ive_made_10000_legitimately_from_the_d3_market/">(Source)</a></span> -->
 
 Most of us had made around $20,000 from the auction house in just two months, some even more than that. Being a poor student at the time, this was a welcome influx of wealth. While fun and lucrative, I was relieved when I finally quit. It required an obscene amount of time every day to manage spreadsheets, research new items, and tweak search values. I don't miss it. There will always be new games on the horizon that offer the ability to profit from the sale of virtual goods, but I doubt we'll see anything like the Diablo 3 real money auction house again. It was a perfect storm consisting of a hugely popular AAA title, poorly designed game systems, and a painfully misguided attempt to legitimize the gold selling black market. Diablo 3's lead designer Jay Wilson [went down in flames](http://www.cinemablend.com/games/Blizzard-CCO-Defends-Jay-Wilson-Says-They-re-Listening-Diablo-3-Community-51620.html) for these mistakes (and others). Meanwhile his replacement, [Josh Mosqueira](http://www.diablowiki.net/Josh_Mosqueira), has been doing a great job rebuilding it from the ashes and I recommend anyone that quit during the shaky launch to give the game another try. You'll still find plenty of bots, though.
