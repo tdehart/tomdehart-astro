@@ -1,0 +1,26 @@
+---
+import ProjectPreview from './ProjectPreview.astro';
+const allProjects = await Astro.glob('../pages/projects/*.md');
+allProjects.sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).getTime() -
+    new Date(a.frontmatter.date).getTime()
+);
+const getFormattedDate = (dateStr: string): string =>
+  new Date(dateStr).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+---
+
+{
+  allProjects.map((post) => (
+    <ProjectPreview
+      url={post.url}
+      title={post.frontmatter.title}
+      date={getFormattedDate(post.frontmatter.date)}
+      description={post.frontmatter.description}
+    />
+  ))
+}

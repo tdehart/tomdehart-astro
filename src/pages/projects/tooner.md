@@ -4,9 +4,6 @@ title: 'Tooner'
 date: 2022-07-01
 description: 'A character builder for the MMO Shadowbane'
 author: 'Tom DeHart'
-image:
-  url: 'https://docs.astro.build/assets/full-logo-light.png'
-  alt: 'The full Astro logo.'
 ---
 
 ![Tooner](images/tooner.png)

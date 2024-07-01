@@ -4,9 +4,6 @@ title: 'Wildstar'
 date: 2022-07-01
 description: 'Building addons for MMORPGs'
 author: 'Tom DeHart'
-image:
-  url: 'https://docs.astro.build/assets/full-logo-light.png'
-  alt: 'The full Astro logo.'
 ---
 
 I've always loved tinkering with the user interface whenever a game allows it. I remember modifying ini files in [Tribes](http://en.wikipedia.org/wiki/Tribes_%28series%29) to move around the health bars so that they were easier to see, and I would toy with addons for hours in [World of Warcraft](http://en.wikipedia.org/wiki/World_of_Warcraft) trying to make the perfect interface. Lately I've been playing [Wildstar](http://en.wikipedia.org/wiki/WildStar_%28video_game%29), a new MMO that provides a powerful API for making addons. In fact, the stock interface was developed entirely with the public API so an aspiring addon developer can crack open any element of the in-game interface and poke around (which is important since there's no documentation yet). The Wildstar developers call this [peer-level functionality](https://forums.wildstar-online.com/forums/index.php?/topic/55410-addons-that-display-enemy-units/?p=595084) and it has allowed for a lot of potentially abusive addons like one that [cheats for you](http://www.curse.com/ws-addons/wildstar/220323-cheatsimon) or one that [shows the location of all nearby enemy players](http://www.curse.com/ws-addons/wildstar/220097-thezone).

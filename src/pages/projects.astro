@@ -1,31 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PostPreview from '../components/PostPreview.astro';
-const allPosts = await Astro.glob('../pages/projects/*.md');
-allPosts.sort(
-  (a, b) =>
-    new Date(b.frontmatter.date).getTime() -
-    new Date(a.frontmatter.date).getTime()
-);
-const getFormattedDate = (dateStr: string): string =>
-  new Date(dateStr).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+import AllProjects from '../components/AllProjects.astro';
 ---
 
 <Layout title='Projects'>
   <main>
-    {
-      allPosts.map((post) => (
-        <PostPreview
-          url={post.url}
-          title={post.frontmatter.title}
-          date={getFormattedDate(post.frontmatter.date)}
-          description={post.frontmatter.description}
-        />
-      ))
-    }
+    <AllProjects />
   </main>
 </Layout>

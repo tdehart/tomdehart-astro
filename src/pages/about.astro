@@ -1,7 +1,31 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+import me from './me.png';
 ---
 
 <Layout title='About'>
-  <p>Philly based Software Engineer focused on user-centered design.</p>
+  <p class='prose'>
+    My journey in tech has taken me from building e-commerce platforms to
+    developing cutting-edge DevSecOps solutions for the Department of Defense.
+    My approach combines technical prowess with a keen eye for user experience,
+    always striving to create software that's not just functional, but intuitive
+    and impactful.
+  </p>
+
+  <p class='prose my-2'>
+    I believe in the power of technology to solve real-world problems and am
+    always excited to take on new challenges that push the boundaries of what's
+    possible in software engineering.
+  </p>
+
+  <figure class='flex rounded-xl p-0 mt-8'>
+    <Image class='w-48 md:h-auto rounded-full mx-auto' src={me} alt='Tom' />
+    <div class='pt-6 md:p-8 text-center md:text-left space-y-4'>
+      <p class='text-lg prose'>
+        Hi there! I'm Tom, a Philly-based software engineer passionate about
+        building beautiful user experiences.
+      </p>
+    </div>
+  </figure>
 </Layout>

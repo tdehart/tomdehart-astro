@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const allPosts = await Astro.glob('../pages/projects/*.md');
+import AllProjects from '../components/AllProjects.astro';
 ---
 
-<Layout title='tomdeh.art'>
-  <!-- <h1 class='prose'>Welcome to tomdeh.art</h1> -->
+<Layout title='Projects'>
+  <main>
+    <AllProjects />
+  </main>
 </Layout>
